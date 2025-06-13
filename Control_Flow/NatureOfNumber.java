@@ -1,4 +1,3 @@
-package BridgeLabz_SIPP_Training_2215001565.Control_Flow;
 import java.util.*;
 public class NatureOfNumber{
 
