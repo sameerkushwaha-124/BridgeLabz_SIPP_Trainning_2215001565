@@ -4,7 +4,7 @@
 // Use an association relationship to show that each customer has an account in a bank.
 // Implement methods that enable communication, such as openAccount() in the Bank class and viewBalance() in the Customer class.
 // Goal: Illustrate association by setting up a relationship between customers and the bank.
-
+import java.util.*;
 public class BankSystem {
     static class Bank {
         private String name;
