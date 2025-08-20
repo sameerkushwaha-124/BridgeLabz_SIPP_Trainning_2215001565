@@ -1,0 +1,47 @@
+CLASS Customer
+    WORD name
+    WORD address
+
+    CONSTRUCTOR Customer(name, address)
+        SET this.name = name
+        SET this.address = address
+
+
+CLASS Restaurant
+    WORD name
+    WORD location
+
+    CONSTRUCTOR Restaurant(name, location)
+        SET this.name = name
+        SET this.location = location
+
+
+CLASS DeliveryBoy
+    WORD name
+    WORD phone
+
+    CONSTRUCTOR DeliveryBoy(name, phone)
+        SET this.name = name
+        SET this.phone = phone
+
+
+CLASS Order
+    Customer customer
+    Restaurant restaurant
+    DeliveryBoy deliveryBoy
+    WORD item
+    NUMBER price
+
+    CONSTRUCTOR Order(customer, restaurant, deliveryBoy, item, price)
+        SET this.customer = customer
+        SET this.restaurant = restaurant
+        SET this.deliveryBoy = deliveryBoy
+        SET this.item = item
+        SET this.price = price
+
+    METHOD displayOrderDetails()
+        PRINT "Order Details:"
+        PRINT "Customer: " + customer.name + " | Address: " + customer.address
+        PRINT "Restaurant: " + restaurant.name + " | Location: " + restaurant.location
+        PRINT "Delivery Boy: " + deliveryBoy.name + " | Phone: " + deliveryBoy.phone
+        PRINT "Item: " + item + " | Price: " + price
