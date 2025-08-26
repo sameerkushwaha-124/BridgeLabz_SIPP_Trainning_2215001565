@@ -46,7 +46,7 @@ CLASS Truck EXTENDS Vehicle:
         RETURN 0.0
     
     METHOD calculateCost(days):
-        RETURN dailyRate * days * 1.5 // 50% premium
+        RETURN dailyRate * days * 1.5 
 
 CLASS VehicleFactory:
     STATIC METHOD createVehicle(type, id, model, dailyRate):
@@ -81,5 +81,5 @@ MAIN METHOD:
     CALL system.addVehicle(car)
     CALL system.addVehicle(truck)
     
-    SET cost1 = system.rentVehicle("C001", 3) // $150
-    SET cost2 = system.rentVehicle("T001", 2) // $240
+    SET cost1 = system.rentVehicle("C001", 3) 
+    SET cost2 = system.rentVehicle("T001", 2) 

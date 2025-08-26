@@ -26,7 +26,7 @@ CLASS SavingAccount EXTENDS Account:
         CALL super(accountNumber, holderName, balance)
     
     METHOD withdraw(amount):
-        IF (balance - amount) < 500: // Min balance $500
+        IF (balance - amount) < 500: 
             PRINT "Insufficient balance. Min $500 required"
             RETURN false
         SET balance -= amount
@@ -82,5 +82,5 @@ MAIN METHOD:
     CALL portal.createAccount("SAVING", "SAV001", "John", 1000.0)
     CALL portal.createAccount("CURRENT", "CUR001", "Jane", 500.0)
     
-    CALL portal.performTransaction("SAV001", "WITHDRAW", 600.0) // Should fail
-    CALL portal.performTransaction("CUR001", "WITHDRAW", 1200.0) // Should work
+    CALL portal.performTransaction("SAV001", "WITHDRAW", 600.0) 
+    CALL portal.performTransaction("CUR001", "WITHDRAW", 1200.0) 
